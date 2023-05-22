@@ -14,9 +14,10 @@ function login()   {
     }else{
         alert("Senha ou CPF incorreto!");
     }
-
 }
-function registrar{
-    var aluno = document.getElementById("aluno");
-    var falta = document.getElementById("falta");
+function registrar()  {
+    var aluno = prompt("Digite o número do aluno:");
+    var falta = prompt("Digite quantas faltas ele teve hoje:");
+    var alt_result = "o aluno " +  aluno + " teve " + falta + " faltas hoje ";
+    document.getElementById("aluno_lista").innerHTML= alt_result;
 }
