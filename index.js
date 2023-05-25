@@ -15,15 +15,14 @@ function login()   {
         alert("Senha ou CPF incorreto!");
     }
 }
+var db = openDatabase("Banco", "3.42.0", "Mybase", 4048);
+db.transaction(function(criar){
+criar.executeSql("CREATE TABLE list (id INTEGER PRIMARY KEY,aluno TEXT,falta TEXT)");
+})
 function registrar()  {
-    var aluno = prompt("Digite o número do aluno:");
-    var falta = prompt("Digite quantas faltas ele teve hoje:");
-    var alt_result = "o aluno " +  aluno + " teve " + falta + " faltas hoje ";
-    document.getElementById("aluno_lista").innerHTML= alt_result;
-    var link = document.createElement("a");
-    var file = new Blob([alt_result], { type: 'text/plain' });
-    link.href = URL.createObjectURL(file);
-    link.download = "presença.txt";
-    link.click();
-    URL.revokeObjectURL(link.href);
+    var aluno = document.getElementById('aluno').value;
+    var falta = document.getElementById('falta').value;
+    db.transaction(function(armazenar){
+    armazenar.executeSql("INSERT INTO list (aluno,falta) VALUES (?,?)", [aluno,falta]);
+})
 }

@@ -4,12 +4,16 @@
     <meta charset="utf-8" lang="pt-br">
     <title>Menu</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
     <div class="central_buttons_div">
+        <form onsubmit="registrar()">
         <div class="button_1_div">
-            <button onclick="registrar()">Registrar presença</button>
+            <input type="text" id="aluno" placeholder="Aluno">
+            <input type="text" id="falta" placeholder="Faltas">
+            <input type="submit" placeholder="Enviar">
+        </form>
         </div>
         <div class="button_2_div">
             <button id="presencas_aluno">Lista de presenças</button>

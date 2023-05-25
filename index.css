@@ -1,29 +1,41 @@
 html{
     height: 100%;
     width: 100%;
-    justify-content: center;
+    background-color:#ffffff;
     display: flex;
-    align-items: center;
+    justify-content: center;
+
 }
 body{
-    height: 2000px;
-    width: 1366px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    
+    height: 100%;
+    width: 768px;
+    background-color:blanchedalmond;
     
 }
+
+
+button{
+    background-color: #a52a2a;
+    widht: 150px;
+    height: 30px;
+    margin-left: 10px;
+    border-top: #a74c4c;
+    border-left: #a74c4c;
+    border: #a74c4c;
+    border: 2px;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow:2px black;
+    text-shadow: 2px;
+    color: #ffffff;
+}
 .central_buttons_div{
-    justify-content: center;
-    display: flex;
-    align-items: center;
+ 
     text-align: center;
-    margin-top: 500px;
-    width: 300px;
-    height: 300px;
+   
+
     
-    background-color: blanchedalmond;
+   
 }
 .button_1_div{
    
