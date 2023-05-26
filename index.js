@@ -15,7 +15,7 @@ function login()   {
         alert("Senha ou CPF incorreto!");
     }
 }
-var db = openDatabase("Banco", "3.42.0", "Mybase", 4048);
+var db = openDatabase("Meu Banco", "3.42.0", "Mybase", 4048);
 db.transaction(function(criar){
 criar.executeSql("CREATE TABLE list (id INTEGER PRIMARY KEY,aluno TEXT,falta TEXT)");
 })
